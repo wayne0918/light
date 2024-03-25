@@ -9,6 +9,7 @@ header {
     height:80px;
     width:100%;
     position:fixed; 
+    z-index:10;
 }
 h1 {
     color:white;
@@ -83,10 +84,14 @@ header a:hover{
     justify-content: space-around;
     background-color: lightsteelblue;
     flex-wrap: wrap;
+    height:780px;
   }
   
   .team-member {
     width: 300px;
+    height:550px;
+    position: relative;
+    top:120px;
     margin: 30px; /* 調整卡片之間的間距 */
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -116,11 +121,25 @@ header a:hover{
   .team-member p {
     margin: 10px 0;
   }
+
+  footer{
+    background-color: #1e1f42;
+    color: #ffffff;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;    
+}
   
 
 /*RWD響應式設計*/
 @media (max-width:768px){
 
+    header{
+        z-index:10;
+    }
+    
     header h1{
         left:50%;
         transform:translateX(-50%);
@@ -153,11 +172,16 @@ header a:hover{
         text-align: center;
         transition:0.3s;
     }
-
     .nav-item{
         margin:10px 0;
     }
     .nav-menu.active{
         left:0;
+    }
+    .team-section{
+        height:2400px;
+    }
+    .team-member{
+        z-index:0; 
     }
 }
